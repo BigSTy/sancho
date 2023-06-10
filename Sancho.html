@@ -1,0 +1,94 @@
+<html>
+<head>
+  <title>Програма "Cyberpunk"</title>
+  <script>
+    function showHint1() {
+      var hintText = document.getElementById("hintText");
+      hintText.innerHTML = "Слова на англійській з чотирма цифрами в кінці";
+    }
+
+    function showHint2() {
+      var hintText = document.getElementById("hintText");
+      hintText.innerHTML = "Він такий самий, який і ти любиш";
+    }
+
+    function showHint3() {
+      var hintText = document.getElementById("hintText");
+      hintText.innerHTML = "Слово із однієї букви від першої особи";
+    }
+
+    function showHint4() {
+      var hintText = document.getElementById("hintText");
+      hintText.innerHTML = "Японська машина з цифрою в кінці '34'";
+    }
+
+    function checkInput() {
+      var userInput1 = document.getElementById("userInput1");
+      var userInput2 = document.getElementById("userInput2");
+      var userInput3 = document.getElementById("userInput3");
+      var userInput4 = document.getElementById("userInput4");
+
+      var outputText1 = document.getElementById("outputText1");
+      var outputText2 = document.getElementById("outputText2");
+      var outputText3 = document.getElementById("outputText3");
+      var outputText4 = document.getElementById("outputText4");
+
+      if (userInput1.value.toLowerCase() === "cyberpunk 2077") {
+        outputText1.innerHTML = "Загляни";
+        userInput1.style.backgroundColor = "green";
+      } else {
+        outputText1.innerHTML = "";
+        userInput1.style.backgroundColor = "red";
+      }
+
+      if (userInput2.value.toLowerCase() === "жовтий") {
+        outputText2.innerHTML = "у мої";
+        userInput2.style.backgroundColor = "green";
+      } else {
+        outputText2.innerHTML = "";
+        userInput2.style.backgroundColor = "red";
+      }
+
+      if (userInput3.value.toLowerCase() === "я") {
+        outputText3.innerHTML = "коментарі в";
+        userInput3.style.backgroundColor = "green";
+      } else {
+        outputText3.innerHTML = "";
+        userInput3.style.backgroundColor = "red";
+      }
+
+      if (userInput4.value.toLowerCase() === "nissan r34") {
+        outputText4.innerHTML = "профілі Інстаграм";
+        userInput4.style.backgroundColor = "green";
+      } else {
+        outputText4.innerHTML = "";
+        userInput4.style.backgroundColor = "red";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Пройди тест та отримай підказку</h1>
+  <p>Дай відповідь на запитання:</p>
+  <input type="text" id="userInput1" placeholder="Яка моя улюблена гра?">
+  <button class="hintButton" onclick="showHint1()">Підказка</button>
+  <p id="outputText1"></p>
+
+  <input type="text" id="userInput2" placeholder="Мій улюблений колір?">
+  <button class="hintButton" onclick="showHint2()">Підказка</button>
+  <p id="outputText2"></p>
+
+  <input type="text" id="userInput3" placeholder="Хто моя любов?">
+  <button class="hintButton" onclick="showHint3()">Підказка</button>
+  <p id="outputText3"></p>
+
+  <input type="text" id="userInput4" placeholder="Моя улюблена машина?">
+  <button class="hintButton" onclick="showHint4()">Підказка</button>
+  <p id="outputText4"></p>
+
+  <p>Підказка:</p>
+  <p id="hintText"></p>
+
+  <button onclick="checkInput()">Відповісти</button>
+</body>
+</html>
